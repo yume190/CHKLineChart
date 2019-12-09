@@ -1691,8 +1691,6 @@ extension CHKLineChartView: UIGestureRecognizerDelegate {
     
     /**
      *  点击事件处理
-     *
-     *  @param sender
      */
     @objc func doTapAction(_ sender: UITapGestureRecognizer) {
         
@@ -1763,8 +1761,6 @@ extension CHKLineChartView: UIGestureRecognizerDelegate {
     
     
     /// 处理长按操作
-    ///
-    /// - Parameter sender:
     @objc func doLongPressAction(_ sender: UILongPressGestureRecognizer) {
         let point = sender.location(in: self)
         let (_, section) = self.getSectionByTouchPoint(point)

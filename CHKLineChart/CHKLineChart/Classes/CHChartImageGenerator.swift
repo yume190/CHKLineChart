@@ -159,10 +159,6 @@ extension CHChartImageGenerator: CHKLineChartDelegate {
     }
     
     /// 调整Y轴标签宽度
-    ///
-    /// - parameter chart:
-    ///
-    /// - returns:
     public func widthForYAxisLabelInKLineChart(in chart: CHKLineChartView) -> CGFloat {
         return chart.kYAxisLabelWidth
     }

@@ -47,8 +47,6 @@ public enum CHChartAlgorithm: CHChartAlgorithmProtocol {
      获取Key值的名称
      
      - parameter name: 可选的二级key
-     
-     - returns:
      */
     public func key(_ name: String = "") -> String {
         switch self {
@@ -77,10 +75,6 @@ public enum CHChartAlgorithm: CHChartAlgorithmProtocol {
     
     /**
      处理算法
-     
-     - parameter datas:
-     
-     - returns:
      */
     public func handleAlgorithm(_ datas: [CHChartItem]) -> [CHChartItem] {
         switch self {
@@ -411,8 +405,6 @@ extension CHChartAlgorithm {
      获取某日的EMA数据
      
      - parameter num:   天数周期
-     - parameter index:
-     - parameter datas:
      
      - returns: //EMA的成交价和成交量
      */
@@ -428,8 +420,6 @@ extension CHChartAlgorithm {
      获取某日的MA数据
      
      - parameter num:   天数周期
-     - parameter index:
-     - parameter datas:
      
      - returns: //MA的成交价和成交量
      */

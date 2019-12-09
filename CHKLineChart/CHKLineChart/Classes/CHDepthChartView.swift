@@ -46,17 +46,12 @@ open class CHKDepthChartItem: NSObject {
     
     /**
      数据源总数
-     
-     - parameter chart:
-     
-     - returns:
      */
     func numberOfPointsInDepthChart(chart: CHDepthChartView) -> Int
     
     /**
      数据源索引为对应的对象
      
-     - parameter chart:
      - parameter index: 索引位
      
      - returns: K线数据对象
@@ -65,11 +60,8 @@ open class CHKDepthChartItem: NSObject {
     
     /**
      获取图表Y轴的显示的内容
-     
-     - parameter chart:
+
      - parameter value:     计算得出的y值
-     
-     - returns:
      */
     @objc func depthChart(chart: CHDepthChartView, labelOnYAxisForValue value: CGFloat) -> String
     
@@ -91,10 +83,8 @@ open class CHKDepthChartItem: NSObject {
     /**
      获取图表X轴的显示的内容
      
-     - parameter chart:
      - parameter index:     索引位
      
-     - returns:
      */
     @objc optional func depthChart(chart: CHDepthChartView, labelOnXAxisForIndex index: Int) -> String
     
@@ -105,10 +95,6 @@ open class CHKDepthChartItem: NSObject {
     @objc optional func didFinishDepthChartRefresh(chart: CHDepthChartView)
     
     /// 设置y轴标签的宽度
-    ///
-    /// - parameter chart:
-    ///
-    /// - returns:
     @objc optional func widthForYAxisLabelInDepthChart(in depthChart: CHDepthChartView) -> CGFloat
     
     
@@ -129,35 +115,21 @@ open class CHKDepthChartItem: NSObject {
     
     /**
      价格的小数位长度
-     
-     - parameter chart:
-     
-     - returns:
      */
     @objc func depthChartOfDecimal(chart: CHDepthChartView) -> Int
     
     /**
      量的小数位长度
-     
-     - parameter chart:
-     
-     - returns:
      */
     @objc func depthChartOfVolDecimal(chart: CHDepthChartView) -> Int
     
     /**
      自定义点击显示信息view
-     - parameter chart:
-     
-     - returns:
      */
     @objc optional func depthChartShowItemView(chart: CHDepthChartView,Selected item: CHKDepthChartItem) -> UIView?
     
     /**
      自定义点击选中view
-     - parameter chart:
-     
-     - returns:
      */
     @objc optional func depthChartTagView(chart: CHDepthChartView,Selected item: CHKDepthChartItem) -> UIView?
     
@@ -394,8 +366,6 @@ open class CHDepthChartView: UIView {
     
     /**
      设置选中的数据点
-     
-     - parameter point:
      */
     func setSelectedIndexByPoint(_ point: CGPoint) {
         
@@ -512,10 +482,6 @@ open class CHDepthChartView: UIView {
     
     /**
      获取坐标系中y坐标对应的y值
-     
-     - parameter y:
-     
-     - returns:
      */
     func getRawValue(_ y: CGFloat) -> CGFloat {
         let max = self.yAxis.max
@@ -842,8 +808,6 @@ extension CHDepthChartView {
     
     
     /// 绘制y轴坐标上的标签
-    ///
-    /// - Parameter yAxisToDraw:
     fileprivate func drawYAxisLabel(_ yAxisToDraw: [(CGRect, String)]) {
         
         var alignmentMode = CATextLayerAlignmentMode.left
@@ -1007,7 +971,7 @@ extension CHDepthChartView {
     
     /**
      绘制点击选中标记图形
-     - parameter section:
+    
      */
     func drawTagGraph(point:CGPoint,item:CHKDepthChartItem){
         if self.selectedTagGraphslayer == nil{
@@ -1040,7 +1004,6 @@ extension CHDepthChartView {
     
     /**
      绘制点击选中显示数据点
-     - parameter section:
      */
     func drawItemInfo(point: CGPoint,item:CHKDepthChartItem){
         // 长宽高
@@ -1155,8 +1118,6 @@ extension CHDepthChartView {
     
     /**
      绘制图表上的点线
-     
-     - parameter section:
      */
     func drawChart() -> [(CGRect, String)]{
         
@@ -1404,8 +1365,6 @@ extension CHDepthChartView: UIGestureRecognizerDelegate {
     
     /**
      *  点击事件处理
-     *
-     *  @param sender
      */
     @objc func doTapAction(_ sender: UITapGestureRecognizer) {
         

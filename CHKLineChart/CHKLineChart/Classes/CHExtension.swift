@@ -14,11 +14,6 @@ public extension String {
     
     /**
      计算文字的宽度
-     
-     - parameter width:
-     - parameter font:
-     
-     - returns:
      */
     func ch_sizeWithConstrained(_ font: UIFont,
                                 constraintRect: CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) -> CGSize {
@@ -41,10 +36,6 @@ public extension UIColor {
     
     /**
      16进制表示颜色
-     
-     - parameter hex:
-     
-     - returns:
      */
     class func ch_hex(_ hex: UInt, alpha: Float = 1.0) -> UIColor {
         return UIColor(red: CGFloat((hex & 0xFF0000) >> 16) / 255.0,
@@ -83,12 +74,6 @@ public extension CGFloat {
     
     /**
      转化为字符串格式
-     
-     - parameter minF:
-     - parameter maxF:
-     - parameter minI:
-     
-     - returns:
      */
     func ch_toString(_ minF: Int = 2, maxF: Int = 6, minI: Int = 1) -> String {
         let valueDecimalNumber = NSDecimalNumber(value: Double(self) as Double)
